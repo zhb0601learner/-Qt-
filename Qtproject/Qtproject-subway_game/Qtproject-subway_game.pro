@@ -5,6 +5,8 @@
 #-------------------------------------------------
 
 QT       += core gui
+QT += widgets
+QT +=core
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -26,13 +28,14 @@ CONFIG += c++11
 
 SOURCES += \
         main.cpp \
-        mymainwindow.cpp
+    mymainwindow.cpp
 
 HEADERS += \
-        mymainwindow.h
+    mymainwindow.h
 
 FORMS += \
         mymainwindow.ui
+
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

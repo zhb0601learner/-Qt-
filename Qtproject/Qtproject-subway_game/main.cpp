@@ -1,5 +1,7 @@
 #include "mymainwindow.h"
 #include <QApplication>
+#include <QGraphicsScene>
+#include <QGraphicsView>
 
 int main(int argc, char *argv[])
 {
