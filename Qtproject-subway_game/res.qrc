@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/data">
+        <file>config.txt</file>
+    </qresource>
+    <qresource prefix="/image">
+        <file>underground/beijingrailwaystation/Platform_of_L2_Beijing_Railway_Station_(20201224162315).jpg</file>
+        <file>underground/dongsishitiao/d362284671eb8e0c60fa2f5e397358d.jpg</file>
+        <file>underground/dongsishitiao/mosaic_of_dongsishitiao1.jpg</file>
+        <file>underground/dongsishitiao/mosaic_of_dongsishitiao2.jpg</file>
+        <file>underground/dongsishitiao/Platform_of_L2_Dongsi_Shitiao_Station_(20210704123716).jpg</file>
+        <file>underground/dongsishitiao/Reserved_platform_of_Dongsi_Shitiao_Station_(20210704123842).jpg</file>
+        <file>underground/dongzhimen/Platform_of_L2_Dongzhimen_Station_(20200421163321).jpg</file>
+    </qresource>
+</RCC>
