@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>introdution</class>
+ <widget class="QDialog" name="introdution">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>645</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>621</width>
+     <height>271</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>欢迎来到地铁解谜游戏！
+本游戏以北京地铁为背景，您需要在不同车站中游览并不断发现一个又一个线索，最终揭开谜
+底。
+在第一阶段，您需要找到车站中设好的点位，以获得拼图碎片开启第二阶段。
+在第二阶段，您需要走过一组特定顺序的车站以开启第三阶段的解谜，这些车站的顺序线索将
+在您游历不同车站的时候出现。
+第三阶段中你需要去到不同车站收集一份散落的文件，从文件中读到最后的答案。
+在过程中，你可以随时点击提示来获得帮助，但更多的要靠自己发现。
+祝您旅途愉快！
+作者：赵俊涵，张昊博，周钰博</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
