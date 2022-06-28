@@ -116,7 +116,16 @@ void MyMainWindow::on_forestpark_clicked()
     if(state==2&&is_record==1)
         seq.push_back(18);
     if(state==3)
+    {
         text[3]=1;
+        QDialog* dialog=new QDialog();
+        dialog->setModal(true);
+        dialog->setWindowTitle(QObject::tr("提示"));
+        dialog->resize(250,40);
+        QLabel *label=new QLabel(dialog);
+        label->setText(QObject::tr("您已解锁第4篇文本线索"));
+        dialog->show();
+    }
 }
 
 void MyMainWindow::on_xizhimen_clicked()
@@ -127,7 +136,16 @@ void MyMainWindow::on_xizhimen_clicked()
     if(state==2&&is_record==1)
         seq.push_back(4);
     if(state==3)
+    {
         text[0]=1;
+        QDialog* dialog=new QDialog();
+        dialog->setModal(true);
+        dialog->setWindowTitle(QObject::tr("提示"));
+        dialog->resize(250,40);
+        QLabel *label=new QLabel(dialog);
+        label->setText(QObject::tr("您已解锁第1篇文本线索"));
+        dialog->show();
+    }
 }
 
 void MyMainWindow::on_dongzhimen_clicked()
@@ -165,7 +183,16 @@ void MyMainWindow::on_dongsishitiao_clicked()
     if(state==2&&is_record==1)
         seq.push_back(10);
     if(state==3)
+    {
         text[2]=1;
+        QDialog* dialog=new QDialog();
+        dialog->setModal(true);
+        dialog->setWindowTitle(QObject::tr("提示"));
+        dialog->resize(250,40);
+        QLabel *label=new QLabel(dialog);
+        label->setText(QObject::tr("您已解锁第3篇文本线索"));
+        dialog->show();
+    }
 }
 
 void MyMainWindow::on_jishuitan_clicked()
@@ -176,7 +203,16 @@ void MyMainWindow::on_jishuitan_clicked()
     if(state==2&&is_record==1)
         seq.push_back(8);
     if(state==3)
+    {
         text[1]=1;
+        QDialog* dialog=new QDialog();
+        dialog->setModal(true);
+        dialog->setWindowTitle(QObject::tr("提示"));
+        dialog->resize(250,40);
+        QLabel *label=new QLabel(dialog);
+        label->setText(QObject::tr("您已解锁第2篇文本线索"));
+        dialog->show();
+    }
 }
 
 void MyMainWindow::closeEvent(QCloseEvent *event)

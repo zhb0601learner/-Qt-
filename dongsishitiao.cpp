@@ -7,6 +7,29 @@ dongsishitiao::dongsishitiao(QWidget *parent) :
     ui(new Ui::dongsishitiao)
 {
     ui->setupUi(this);
+    if(index==0)
+    {
+        ui->label_2->show();
+        ui->label_3->show();
+        ui->label_4->show();
+        ui->pushButton_3->show();
+        ui->lineEdit->show();
+        ui->lineEdit_2->show();
+        ui->lineEdit_3->show();
+    }
+    else
+    {
+        ui->label_2->hide();
+        ui->label_3->hide();
+        ui->label_4->hide();
+        ui->pushButton_3->hide();
+        ui->lineEdit->hide();
+        ui->lineEdit_2->hide();
+        ui->lineEdit_3->hide();
+        ui->label_5->hide();
+    }
+    QPixmap pixmap(photo[index]);
+    ui->label->setPixmap(pixmap.scaled(QSize(geometry().width(),geometry().height()),Qt::KeepAspectRatio,Qt::SmoothTransformation));
 }
 
 dongsishitiao::~dongsishitiao()
