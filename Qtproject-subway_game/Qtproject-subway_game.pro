@@ -27,12 +27,16 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
+    beijingrailwaystation.cpp \
+    fuxingmen.cpp \
         main.cpp \
     mymainwindow.cpp \
     mainwindow.cpp \
     pekinguniveastgate.cpp \
     config.cpp \
     textread.cpp \
+    tiananmenwest.cpp \
+    xidan.cpp \
     zhongguancun.cpp \
     huilongguan.cpp \
     introdution.cpp \
@@ -42,11 +46,15 @@ SOURCES += \
     xizhimen.cpp
 
 HEADERS += \
+    beijingrailwaystation.h \
+    fuxingmen.h \
     mymainwindow.h \
     mainwindow.h \
     config.h \
     pekinguniveastgate.h \
     textread.h \
+    tiananmenwest.h \
+    xidan.h \
     zhongguancun.h \
     huilongguan.h \
     introdution.h \
@@ -56,10 +64,14 @@ HEADERS += \
     xizhimen.h
 
 FORMS += \
+    beijingrailwaystation.ui \
+    fuxingmen.ui \
         mymainwindow.ui \
     mainwindow.ui \
     pekinguniveastgate.ui \
     textread.ui \
+    tiananmenwest.ui \
+    xidan.ui \
     zhongguancun.ui \
     huilongguan.ui \
     introdution.ui \
