@@ -343,27 +343,58 @@ void MyMainWindow::on_actionintroduction_triggered()
 
 void MyMainWindow::on_beijingrailwaystation_clicked()
 {
-
+    beijingrailwaystation window=new beijingrailwaystation();
+    window->setWindowTitle("北京火车站站");
+    window->show();
+    if(state==2&&is_record==1)
+        seq.push_back(12);
 }
 
 void MyMainWindow::on_jianguomen_clicked()
 {
-
+    jianguomen* window=new jianguomen();
+    window->setWindowTitle("建国门站");
+    window->show();
+    if(state==2&&is_record==1)
+        seq.push_back(11);
+    if(state==3)
+    {
+        text[4]=1;
+        QDialog* dialog=new QDialog();
+        dialog->setModal(true);
+        dialog->setWindowTitle(QObject::tr("提示"));
+        dialog->resize(250,40);
+        QLabel *label=new QLabel(dialog);
+        label->setText(QObject::tr("您已解锁第5篇文本线索"));
+        dialog->show();
+    }
 }
 
 void MyMainWindow::on_tiananmenxi_clicked()
 {
-
+    tiananmenwest* window=new tiananmenwest();
+    window->setWindowTitle("天安门西站");
+    window->show();
+    if(state==2&&is_record==1)
+        seq.push_back(15);
 }
 
 void MyMainWindow::on_xidan_clicked()
 {
-
+    xidan* window=new xidan();
+    window->setWindowTitle("西单站");
+    window->show();
+    if(state==2&&is_record==1)
+        seq.push_back(14);
 }
 
 void MyMainWindow::on_fuxingmen_clicked()
 {
-
+    fuxingmen* window=new fuxingmen();
+    window->setWindowTitle("复兴门站");
+    window->show();
+    if(state==2&&is_record==1)
+        seq.push_back(13);
 }
 
 void MyMainWindow::on_pushButton_clicked()
