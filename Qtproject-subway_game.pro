@@ -45,7 +45,12 @@ SOURCES += \
     jishuitan.cpp \
     nanluoguxiang.cpp \
     dongzhimen.cpp \
-    dongsishitiao.cpp
+    dongsishitiao.cpp \
+    fuxingmen.cpp \
+    tiananmenwest.cpp \
+    xidan.cpp \
+    beijingrailwaystation.cpp \
+    jianguomen.cpp
 
 HEADERS += \
     mymainwindow.h \
@@ -65,7 +70,12 @@ HEADERS += \
     jishuitan.h \
     nanluoguxiang.h \
     dongzhimen.h \
-    dongsishitiao.h
+    dongsishitiao.h \
+    fuxingmen.h \
+    tiananmenwest.h \
+    xidan.h \
+    beijingrailwaystation.h \
+    jianguomen.h
 
 FORMS += \
         mymainwindow.ui \
@@ -84,7 +94,12 @@ FORMS += \
     jishuitan.ui \
     nanluoguxiang.ui \
     dongzhimen.ui \
-    dongsishitiao.ui
+    dongsishitiao.ui \
+    fuxingmen.ui \
+    tiananmenwest.ui \
+    xidan.ui \
+    beijingrailwaystation.ui \
+    jianguomen.ui
 
 
 # Default rules for deployment.
@@ -94,3 +109,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     res.qrc
+
+DISTFILES +=

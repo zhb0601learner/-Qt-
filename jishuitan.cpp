@@ -7,6 +7,8 @@ jishuitan::jishuitan(QWidget *parent) :
     ui(new Ui::jishuitan)
 {
     ui->setupUi(this);
+    QPixmap pixmap(photo[index]);
+    ui->label->setPixmap(pixmap.scaled(QSize(geometry().width(),geometry().height()),Qt::KeepAspectRatio,Qt::SmoothTransformation));
 }
 
 jishuitan::~jishuitan()

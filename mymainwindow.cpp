@@ -28,6 +28,11 @@
 #include "jishuitan.h"
 #include "nanluoguxiang.h"
 #include "dongsi.h"
+#include "beijingrailwaystation.h"
+#include "fuxingmen.h"
+#include "tiananmenwest.h"
+#include "xidan.h"
+#include "jianguomen.h"
 MyMainWindow::MyMainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MyMainWindow)
@@ -215,6 +220,63 @@ void MyMainWindow::on_jishuitan_clicked()
     }
 }
 
+void MyMainWindow::on_beijingrailwaystation_clicked()
+{
+    beijingrailwaystation* window=new beijingrailwaystation();
+    window->setWindowTitle("北京站站");
+    window->show();
+    if(state==2&&is_record==1)
+        seq.push_back(12);
+}
+
+void MyMainWindow::on_jianguomen_clicked()
+{
+    jianguomen* window=new jianguomen();
+    window->setWindowTitle("建国门站");
+    window->show();
+    if(state==2&&is_record==1)
+        seq.push_back(11);
+    if(state==3)
+    {
+        text[4]=1;
+        QDialog* dialog=new QDialog();
+        dialog->setModal(true);
+        dialog->setWindowTitle(QObject::tr("提示"));
+        dialog->resize(250,40);
+        QLabel *label=new QLabel(dialog);
+        label->setText(QObject::tr("您已解锁第5篇文本线索"));
+        dialog->show();
+    }
+}
+
+void MyMainWindow::on_tiananmenxi_clicked()
+{
+    tiananmenwest* window=new tiananmenwest();
+    window->setWindowTitle("天安门西站");
+    window->show();
+    if(state==2&&is_record==1)
+        seq.push_back(15);
+}
+
+void MyMainWindow::on_xidan_clicked()
+{
+    xidan* window=new xidan();
+    window->setWindowTitle("西单站");
+    window->show();
+    if(state==2&&is_record==1)
+        seq.push_back(14);
+}
+
+void MyMainWindow::on_fuxingmen_clicked()
+{
+    fuxingmen* window=new fuxingmen();
+    window->setWindowTitle("复兴门站");
+    window->show();
+    if(state==2&&is_record==1)
+        seq.push_back(13);
+}
+
+
 void MyMainWindow::closeEvent(QCloseEvent *event)
 {
     QFile file("../Qtproject-subway_game/config.txt");
@@ -283,7 +345,7 @@ void MyMainWindow::on_pushButton_2_clicked()
             if(pintu[i]==1)num++;
         QString str=QString("当前为解谜第一阶段 拼图收集进度：%1/8").arg(num);
         label->setText(str);
-        label->resize(300,20);
+        label->resize(350,20);
         dialog->setModal(true);
         dialog->setWindowTitle(tr("解谜进度"));
         dialog->show();
@@ -308,7 +370,7 @@ void MyMainWindow::on_pushButton_2_clicked()
             if(text[i]==1)num++;
         QString str=QString("当前为解谜第三阶段 文档收集进度：%1/5").arg(num);
         label->setText(str);
-        label->resize(300,20);
+        label->resize(350,20);
         dialog->setModal(true);
         dialog->setWindowTitle(tr("解谜进度"));
         dialog->show();
@@ -339,62 +401,6 @@ void MyMainWindow::on_actionintroduction_triggered()
     introdution* intro=new introdution();
     intro->setWindowTitle(tr("游戏介绍"));
     intro->show();
-}
-
-void MyMainWindow::on_beijingrailwaystation_clicked()
-{
-    beijingrailwaystation* window=new beijingrailwaystation();
-    window->setWindowTitle("北京火车站站");
-    window->show();
-    if(state==2&&is_record==1)
-        seq.push_back(12);
-}
-
-void MyMainWindow::on_jianguomen_clicked()
-{
-    jianguomen* window=new jianguomen();
-    window->setWindowTitle("建国门站");
-    window->show();
-    if(state==2&&is_record==1)
-        seq.push_back(11);
-    if(state==3)
-    {
-        text[4]=1;
-        QDialog* dialog=new QDialog();
-        dialog->setModal(true);
-        dialog->setWindowTitle(QObject::tr("提示"));
-        dialog->resize(250,40);
-        QLabel *label=new QLabel(dialog);
-        label->setText(QObject::tr("您已解锁第5篇文本线索"));
-        dialog->show();
-    }
-}
-
-void MyMainWindow::on_tiananmenxi_clicked()
-{
-    tiananmenwest* window=new tiananmenwest();
-    window->setWindowTitle("天安门西站");
-    window->show();
-    if(state==2&&is_record==1)
-        seq.push_back(15);
-}
-
-void MyMainWindow::on_xidan_clicked()
-{
-    xidan* window=new xidan();
-    window->setWindowTitle("西单站");
-    window->show();
-    if(state==2&&is_record==1)
-        seq.push_back(14);
-}
-
-void MyMainWindow::on_fuxingmen_clicked()
-{
-    fuxingmen* window=new fuxingmen();
-    window->setWindowTitle("复兴门站");
-    window->show();
-    if(state==2&&is_record==1)
-        seq.push_back(13);
 }
 
 void MyMainWindow::on_pushButton_clicked()

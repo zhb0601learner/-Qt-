@@ -32,7 +32,7 @@ void haidianhuangzhuang::on_pushButton_4_clicked()
 {
     if(state==1)
     {
-    int i=QMessageBox::information(this,tr("恭喜！"),tr("您已获得碎片2！"),QMessageBox::Ok);
-    pintu[1]=1;
+    int i=QMessageBox::information(this,tr("恭喜！"),tr("您已获得碎片3！"),QMessageBox::Ok);
+    pintu[2]=1;
     }
 }

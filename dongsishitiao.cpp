@@ -16,6 +16,7 @@ dongsishitiao::dongsishitiao(QWidget *parent) :
         ui->lineEdit->show();
         ui->lineEdit_2->show();
         ui->lineEdit_3->show();
+        ui->label_5->hide();
     }
     else
     {
@@ -113,7 +114,7 @@ void dongsishitiao::on_pushButton_clicked()
 
 void dongsishitiao::on_pushButton_3_clicked()
 {
-    if(ui->lineEdit->text()=='3'&&ui->lineEdit_2->text()=='1957'&&ui->lineEdit_3->text()=='2023')
+    if(ui->lineEdit->text()=="3"&&ui->lineEdit_2->text()=="1957"&&ui->lineEdit_3->text()=="2023")
     {
         ui->label_2->hide();
         ui->label_3->hide();
@@ -122,6 +123,8 @@ void dongsishitiao::on_pushButton_3_clicked()
         ui->lineEdit->hide();
         ui->lineEdit_2->hide();
         ui->lineEdit_3->hide();
+        ui->pushButton->hide();
+        ui->pushButton_2->hide();
         ui->label_5->show();
         index=4;
         QPixmap pixmap(photo[index]);
@@ -130,8 +133,8 @@ void dongsishitiao::on_pushButton_3_clicked()
     }
     else
     {
-        ui->lineEdit->setText(" ");
-        ui->lineEdit_2->setText(" ");
-        ui->lineEdit_3->setText(" ");
+        ui->lineEdit->setText("");
+        ui->lineEdit_2->setText("");
+        ui->lineEdit_3->setText("");
     }
 }
