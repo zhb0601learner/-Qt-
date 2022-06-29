@@ -343,7 +343,7 @@ void MyMainWindow::on_actionintroduction_triggered()
 
 void MyMainWindow::on_beijingrailwaystation_clicked()
 {
-    beijingrailwaystation window=new beijingrailwaystation();
+    beijingrailwaystation* window=new beijingrailwaystation();
     window->setWindowTitle("北京火车站站");
     window->show();
     if(state==2&&is_record==1)
